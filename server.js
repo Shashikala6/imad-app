@@ -5,7 +5,27 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne={
+    title:'Article-one |Shashikala',
+    heading:'Article-one',
+    date:'sept 5th, 2017',
+    content:`
+    <p>
+    MY 
+       Jorney starts from Holalure
+       . Shimoga district, Karnataka State
+        MY Jorney starts from Holalure  MY Jorney starts from Holalure  MY Jorney starts from Holalure
+        V MY Jorney starts from Holalure  MY Jorney starts from Holalure
+       Studied In
+  </p>
 
+   <ol>
+       Primary
+       Middle school
+       High school in holalur
+        
+   </ol>`
+ };
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
