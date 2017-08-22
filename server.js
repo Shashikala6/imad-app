@@ -38,7 +38,7 @@ var htmlTemplate=`
 <html>
     <head>
 <title>
-   $(title)
+   ${title}
 </title>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <link href="/ui/style.css" rel="stylesheet" />
@@ -54,14 +54,14 @@ var htmlTemplate=`
    </h1> 
 <div>
      <h3>
-       $(heading) 
+       ${heading} 
      </h3>
  </div>
           <div>
-                $(date)
+                ${date}
           </div>
            <div>
-                $(content)
+                ${content}
           </div>
 
    </body>
