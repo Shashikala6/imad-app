@@ -26,6 +26,14 @@ var articleOne={
       </ol>`
  };
 
+
+function htmlTempate(data){
+
+var title=data.title;
+var heading=data.heading;
+var date=data.date;
+var content=data.content;
+
 var htmlTemplate=`
 <html>
     <head>
@@ -56,14 +64,17 @@ var htmlTemplate=`
                 $(content)
           </div>
 
-</body>
-</html>
+   </body>
+    </html>
 ;`
+ return htmlTemplate;
+
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/article-one', function(req, res){
-     res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+     res.send(createTemplate(artcleOne));
 });
 
 app.get('/ui/style.css', function (req, res) {
