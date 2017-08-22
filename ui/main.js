@@ -3,7 +3,7 @@ console.log('Loaded!');
 var element = document.getElementById('main-text');
 element.innerHTML =' NEW VVALUE';
 // move the image
-var img = document.getElementById('img');
+var img = document.getElementById('madi');
 img.onclick = function(_) {
     img.style.margineLeft='100px';
 };
