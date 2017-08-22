@@ -27,7 +27,7 @@ var articleOne={
  };
 
 
-function htmlTempate(data){
+function htmlTemplate(data){
 
 var title=data.title;
 var heading=data.heading;
