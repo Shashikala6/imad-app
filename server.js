@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne={
+var articles={ 
+              articleOne:{
     title:'Article-one |Shashikala',
     heading:'Article-one',
     date:'sept 5th, 2017',
@@ -24,9 +25,44 @@ var articleOne={
        High school in holalur
         
       </ol>`
- };
+ },
+              articleTwo:{
+                  title:'Article-two |Shashikala',
+    heading:'Article-Two',
+    date:'sept 6th, 2017',
+    content:`
+    <p>
+   
+         Article two
+     </p>
 
+     <ol>
+       Primary
+       Middle school
+       High school in holalur
+        
+      </ol>`
+              },
+              articleThree:{
+    title:'Article-three |Shashikala',
+    heading:'Article-three',
+    date:'sept 7th, 2017',
+    content:`
+    <p>
+         article-three
+         MY Jorney starts from Holalure. Shimoga district, Karnataka State
+       
+     </p>
 
+     <ol>
+       Primary
+       Middle school
+       High school in holalur
+        
+      </ol>`
+ 
+              }
+             };
 function createTemplate(data){
 
 var title=data.title;
