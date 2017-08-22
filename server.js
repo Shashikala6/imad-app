@@ -11,22 +11,54 @@ var articleOne={
     date:'sept 5th, 2017',
     content:`
     <p>
-    MY 
-       Jorney starts from Holalure
-       . Shimoga district, Karnataka State
+   
+         MY Jorney starts from Holalure. Shimoga district, Karnataka State
         MY Jorney starts from Holalure  MY Jorney starts from Holalure  MY Jorney starts from Holalure
         V MY Jorney starts from Holalure  MY Jorney starts from Holalure
        Studied In
-  </p>
+     </p>
 
-   <ol>
+     <ol>
        Primary
        Middle school
        High school in holalur
         
-   </ol>`
+      </ol>`
  };
 
+var htmlTemplate=`
+<html>
+    <head>
+<title>
+   $(title)
+</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link href="/ui/style.css" rel="stylesheet" />
+
+</head>
+    <body>
+        <div class='container'>
+   <h1>
+       <div>
+         <a href='/'>Home</a>  
+          <hr/>
+       </div>
+   </h1> 
+<div>
+     <h3>
+       $(heading) 
+     </h3>
+ </div>
+          <div>
+                $(date)
+          </div>
+           <div>
+                $(content)
+          </div>
+
+</body>
+</html>
+;`
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
