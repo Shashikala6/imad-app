@@ -27,7 +27,7 @@ var articleOne={
  };
 
 
-function htmlTemplate(data){
+function createTemplate(data){
 
 var title=data.title;
 var heading=data.heading;
